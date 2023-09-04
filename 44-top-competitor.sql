@@ -1,4 +1,4 @@
---this is query to get hacker_id and name of hackers who achieved full scores for more than one challenge and order desc by total challenges and  If more than one hacker received full scores in same number of challenges, then sort them by ascending hacker_id.
+--this is query to get top competitor representative by hacker_id and name of hackers who achieved full scores for more than one challenge and order desc by total challenges and  If more than one hacker received full scores in same number of challenges, then sort them by ascending hacker_id.
 
 select h.hacker_id, h.name
 from hackers h
