@@ -4,6 +4,8 @@
 --Leaf: If node is leaf node.
 --Inner: If node is neither root nor leaf node.
 
+
+--this is query from engineeringwitharavind  github
 select n, case
             when p is null then 'Root'
             when exists (select n from bst where p = b.n) then 'Inner'
