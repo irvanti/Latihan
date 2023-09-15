@@ -1,7 +1,7 @@
 --this is query to print the prime number till max is 1000
 
 
---this is query wrote by
+--this is query wrote by nickat on comment https://www.hackerrank.com/challenges/print-prime-numbers/forum/comments/402778
 set @potential_prime := 1;
 set @divisor := 1;
 select GROUP_CONCAT(potential_prime SEPARATOR '&')
