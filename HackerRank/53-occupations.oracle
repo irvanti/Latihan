@@ -1,0 +1,13 @@
+--this is query to get OCCUPATIONS so that each Name is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be Doctor, Professor, Singer, and Actor, 
+respectively.
+
+--this is solutions i get from https://github.com/rene-d/hackerrank/blob/master/sql/advanced-select/occupations.sql
+
+select Doctor, Professor, Singer, Actor
+from (select row_number() over (partition by occupation order by name) as rn, name, occupation
+      from occupations)
+pivot (max(name) for occupation in ('Doctor' as Doctor,
+                                    'Professor' as Professor,
+                                    'Singer' as Singer,
+                                    'Actor' as Actor))
+order by rn;
